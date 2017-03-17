@@ -1,0 +1,24 @@
+<template name="subCategoriesMain">
+    <div class="row">
+        <div class="col-md-12 text-left">
+            <a href="/" class="btn btn-danger"><i style="font-size: 12px" class="material-icons">backspace</i> Regresar</a>
+        </div>
+    </div>
+    <br>
+
+    {{#each listSubcategories}}
+        <div class="col-md-3">
+            <div class="card {{#if countDivSucategories _id}}view-div-sub-categories{{else}}view-products-sub{{/if}}" style="background-color: #009688">
+                <br>
+                {{#if countDivSucategories _id}}
+                    <i style="font-size: 40px;color: white" class="material-icons">add</i>
+                {{else}}
+                    <i style="font-size: 40px;color: white" class="material-icons">bookmark</i>
+                {{/if}}
+                    <h3 style="font-size: 10px;color: white"><b>{{name}}</b></h3>
+                    <br>
+            </div>
+            <br>
+        </div>
+    {{/each}}
+</template>

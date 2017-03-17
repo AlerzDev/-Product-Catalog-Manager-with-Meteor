@@ -1,0 +1,43 @@
+<template name="productsMain">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h2>{{nameSection}}</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-1">
+            <a class="btn btn-success back-products" style="margin-top: 290px"><i style="font-size: 35px" class="material-icons">chevron_left</i></a>
+        </div>
+        <div class="col-md-10">
+            {{#each listProducts}}
+                <div class="col-md-3">
+                    <div class="card view-details-product text-center" data-toggle="modal"
+                         data-target="#view-image-product">
+                        <img  class="img-responsive img-rounded center-block"  src="{{BASE_URL}}public/images/products_image/{{_id}}.jpg">
+                        <div class="text-center">
+                            <h3 style="font-size: 10px"><b>{{name}}</b></h3>
+                            <br>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            {{/each}}
+        </div>
+        <div class="col-md-1">
+            <a id="{{pager}}" class="btn btn-success next-products" style="margin-top: 290px"><i id="{{pager}}" style="font-size: 35px" class="material-icons">chevron_right</i></a>
+        </div>
+    </div>
+    {{# simpleModal title="Vista del producto" id="view-image-product"}}
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3>{{viewImage.name}}</h3>
+            </div>
+            <div class="col-md-12 text-center">
+                <img class="img-responsive img-rounded center-block" src="{{BASE_URL}}public/images/products_image/{{viewImage._id}}.jpg">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-info" data-dismiss="modal">Cerrar</button>
+        </div>
+    {{/simpleModal}}
+</template>

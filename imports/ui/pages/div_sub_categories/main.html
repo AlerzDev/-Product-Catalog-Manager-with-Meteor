@@ -1,0 +1,19 @@
+<template name="divSubCategoriesMain">
+    <div class="row">
+        <div class="col-md-12 text-left">
+            <a href="/sub-categorias" class="btn btn-danger"><i style="font-size: 12px" class="material-icons">backspace</i> Regresar</a>
+        </div>
+    </div>
+    <br>
+    {{#each listDivSubCategories}}
+        <div class="col-md-3">
+            <div class="card view-products-div" style="background-color: #3f51b5">
+                <br>
+                <i style="font-size: 40px;color: white" class="material-icons">bookmark</i>
+                <h3 style="font-size: 10px;color: white"><b>{{name}}</b></h3>
+                <br>
+            </div>
+            <br>
+        </div>
+    {{/each}}
+</template>

@@ -1,0 +1,44 @@
+<template name="productsLayout">
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="/"
+                   style="color: #122b40; font-size: 50px"><strong>Cabasso</strong></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="background-color: white;margin-top: -10px">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a style="font-size: 15px;color:#3f51b5 ;font-weight: 400" href="/catalogo-categorias" >Catalogo</a>
+                    </li>
+                    <li>
+                        <a style="font-size: 15px;color:#3f51b5 ;font-weight: 400"><i class="fa fa-envelope-o" aria-hidden="true"></i>ventas@cabasso.mx</a>
+                    </li>
+                    <li>
+                        <a style="font-size: 15px;color:#3f51b5 ;font-weight: 400" class="page-scroll"
+                           href="#contact"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a style="font-size: 15px;color:#3f51b5 ;font-weight: 400" class="page-scroll"
+                           href="#contact"><i class="fa fa-volume-control-phone"></i>(477) 713 1068</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <br><br><br><br>
+    <div class="container" style="">
+        <div class="row">
+            {{> Template.dynamic template=products}}
+        </div>
+    </div>
+</template>

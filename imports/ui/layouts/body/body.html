@@ -1,0 +1,207 @@
+<template name="App_body">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="/"
+                   style="color: #122b40; font-size: 50px"><strong>Cabasso</strong></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a style="font-size: 15px;font-weight: 400" class="page-scroll" href="#catalog">Catalogo</a>
+                    </li>
+                    <li>
+                        <a style="font-size: 15px;font-weight: 400" class="page-scroll" href="#services">Servicios</a>
+                    </li>
+                    <li>
+                        <a style="font-size: 15px;font-weight: 400" class="page-scroll" href="#contact">Contactanos</a>
+                    </li>
+                    <li>
+                        <a style="font-size: 15px;font-weight: 400" class="page-scroll" href="{{configuration.facebook}}"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a style="font-size: 15px;font-weight: 400" class="page-scroll" href="#contact"><i class="fa fa-volume-control-phone"></i>(477){{configuration.phone}}</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7">
+                    <div class="header-content">
+                        <div class="header-content-inner" style="color: #122b40">
+                            <h1><strong>{{configuration.name}}</strong> {{configuration.primarySlogan}}</h1>
+                            <h3>{{configuration.secondarySlogan}}</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="catalog" class="download  text-center">
+        <div class="container" style="margin-top: -100px">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h2 class="section-heading">Catalogo</h2>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row text-center">
+                <div class="col-md-12">
+                    {{> Template.dynamic template=categories}}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="features">
+        <div class="container" style="margin-top: -90px">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-heading">
+                        <h2>Conoce nuestros servicios</h2>
+                        <p class="text-muted">Tenemos soluciones para ti.</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="{{configuration.urlStaticServer}}public/images/configuration/silla.jpg" class="img-responsive" alt="">
+                </div>
+                <div class="col-md-8">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <i class="material-icons text-primary">{{configuration.servicesIcon1}}</i>
+                                    <h3>{{configuration.servicesTitle1}}</h3>
+                                    <p class="text-muted">{{configuration.servicesDescription1}}</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <i class="material-icons text-primary">{{configuration.servicesIcon2}}</i>
+                                    <h3>{{configuration.servicesTitle2}}</h3>
+                                    <p class="text-muted">{{configuration.servicesDescription2}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <i class="material-icons text-primary">{{configuration.servicesIcon3}}</i>
+                                    <h3>{{configuration.servicesTitle3}}</h3>
+                                    <p class="text-muted">{{configuration.servicesDescription3}}</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <i class="material-icons text-primary">{{configuration.servicesIcon4}}</i>
+                                    <h3>{{configuration.servicesTitle4}}</h3>
+                                    <p class="text-muted">{{configuration.servicesDescription4}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="margin-top: -150px">
+        <div class="cta-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2>Contactanos</h2>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-6">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Nombre completo *</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1"
+                                       aria-describedby="emailHelp" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Telefono o celular*</label>
+                                <input type="tel" class="form-control" id="exampleInputPassword1"
+                                       placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Correo electronico*</label>
+                                <input type="email" class="form-control" id="exampleInputPassword1"
+                                       placeholder="">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="exampleTextarea">Mensaje</label>
+                                <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.6719377822415!2d-101.68234318531587!3d21.125641485945977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842bbf0c4c9e5239%3A0x8bb0287fec488099!2sMuebles+CABASSO!5e0!3m2!1ses!2smx!4v1483508104346"
+                                width="550" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" style="margin-top: -100px">
+        <div class="container">
+            <h2>Siguenos en nuestras redes sociales</h2>
+            <ul class="list-inline list-social">
+                <li class="social-facebook">
+                    <a href="{{configuration.facebook}}"><i class="fa fa-facebook"></i></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2016 Cabasso S.A. de C.V. Todos los derechos reservados.</p>
+            <ul class="list-inline">
+                <li>
+                    <a href="#">Aviso de privacidad</a>
+                </li>
+                <li>
+                    <a href="#">Terminos y condiciones</a>
+                </li>
+                <li>
+                    <a href="#">By Alex<i class="fa fa-heart" aria-hidden="true"></i>Dev</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="http://cabasso.mx:4000/public/landing_page/vendor/jquery/jquery.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.js"></script>
+    <!-- Theme JavaScript -->
+    <script src="http://cabasso.mx:4000/public/landing_page/js/new-age.js"></script>
+</template>
